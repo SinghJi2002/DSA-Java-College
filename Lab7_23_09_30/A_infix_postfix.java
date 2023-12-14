@@ -1,5 +1,3 @@
-package Lab7_23_09_30;
-
 import java.util.Stack;
 
 public class A_infix_postfix {
@@ -46,17 +44,18 @@ public class A_infix_postfix {
                 }
                 stack.push(c);  
             }
-            while (!stack.isEmpty()) {
-                if (stack.peek() == '(')
-                    return "Invalid Expression";
-                solutionString += stack.peek();
-                stack.pop();
-            }
-            
-            
         }
-        return solutionString;
-    }
+        while (!stack.isEmpty()) {
+            if (stack.peek() == '('){
+                return "Invalid Expression";
+            }
+            solutionString += stack.peek();
+            stack.pop();
+        }
+            
+         return solutionString;
+        }
+    
 
     public static void main(String[] args) {
         String toBeConvertString="(a+b)/c*d-e^f";

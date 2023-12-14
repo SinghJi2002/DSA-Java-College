@@ -1,4 +1,4 @@
-package Lab5_23_09_16;
+
 
 class LinkedList{
     Node head;
